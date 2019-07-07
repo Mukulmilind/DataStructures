@@ -1,4 +1,10 @@
+#for Include Folder
 Python/Include/
+
+# for Lib folder
 Python/Lib/
-Python/Scripts/
+
+# for Scripts folder
+Python/Scripts
+
 *.cfg
