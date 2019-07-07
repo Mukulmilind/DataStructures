@@ -1,0 +1,4 @@
+Python/Include/
+Python/Lib/
+Python/Scripts/
+*.cfg
