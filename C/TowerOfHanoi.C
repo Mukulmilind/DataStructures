@@ -20,4 +20,3 @@ void main()
 	tower(n,'A','B','C');
 	getch();
 }
-
