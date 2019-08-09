@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BubbleSortReverse",
+            "request": "launch",
+            "mainClass": "BubbleSortReverse",
+            "projectName": "DataStructures_cbc83516"
+        }
+    ]
+}
