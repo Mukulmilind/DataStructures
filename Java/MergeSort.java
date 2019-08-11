@@ -42,9 +42,10 @@ class MergeSort {
 
         int i = start;
         int j = mid;
-        int tempIndex = 0;
 
+        int tempIndex = 0;
         int[] temp = new int[end - start];
+        
         while (i < mid && j < end){
             // Since we are using <= the relative position of duplicates are preseved.
             temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];

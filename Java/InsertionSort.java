@@ -1,8 +1,8 @@
 /*
     Author: Mukul Milind Mishra [mukulmilind23@gamil.com]
-    The Insertion Sort algorithm picks each element in the array and inserts them in the right position
-    of the sorted logical partition. Once this operation is applied on each element in the array the 
-    entire array is sorted.
+    The Insertion Sort algorithm picks each element from the unsorted array and inserts them in the 
+    right position of the sorted logical partition. Once this operation is applied on each element in
+    the array the entire array is sorted.
     
     Runtime is same O(n^2) which is highly inefficient, but better than bubble sort as swapping is less. 
     This is a stable sort algorithms as it preserves the postition of the duplicate elements.
