@@ -15,7 +15,7 @@ class MergeSort {
         int[] array = {20, 35, -15, 7, 55, 1, -22};
 
         mergeSort(array, 0, array.length);
-        System.out.println("Sorted Array is : ");
+        System.out.print("Sorted Array is : ");
         for (int i: array) {
             System.out.print(i + " ");
         }
