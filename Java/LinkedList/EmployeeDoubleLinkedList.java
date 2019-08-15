@@ -57,6 +57,23 @@ class DoublyLinkedList {
         return removedNode;
     }
 
+    // Remove element from the end of the list
+    public EmployeeNodeDoubly removeFromEnd() {
+        if(isEmply()) return null;
+
+        EmployeeNodeDoubly removedNode = tail;
+
+        if(tail.getPrevious() == null) {
+            tail = null;
+        } else {
+            tail = tail.getPrevious();
+            tail.setNext(null);
+        }
+        removedNode.setPrevious(null);
+        size--;
+        return removedNode;
+    }
+
     public int getSize() {
         return size;
     }
@@ -92,12 +109,20 @@ public class EmployeeDoubleLinkedList {
         empList.addToFront(uday);
         empList.addToEnd(poonam);
 
+        System.out.println("Current Size of list is: " + empList.getSize());
+        
         empList.printList();
 
         empList.removeFromFront();
 
+        System.out.println("Current Size of list is: " + empList.getSize());
+
         empList.printList();
 
+        empList.removeFromEnd();
+
         System.out.println("Current Size of list is: " + empList.getSize());
+
+        empList.printList();
     }
 }
