@@ -66,6 +66,21 @@ class LinkedList {
         tail = node;
         size++;
     }
+    // Challenge 1: Method for adding 'data' before 'key' element in the list
+    public void addBefore(int data, int key) {
+        Node node = new Node(data);
+        Node current = head;
+        while (current.getData() != key) {
+            current = current.getNext();
+        }
+        // key not found
+        if (current == null) return;
+
+        node.setNext(current);
+        node.setPrevious(current.getPrevious());
+        current = current.getPrevious();
+        current.setNext(node);
+    }
 
     public Node removeFront() {
         if (isEmpty()) return null;
@@ -133,6 +148,11 @@ public class DoublyLinkedList {
         newList.printList();
         System.out.println("Current Size of list is: " + newList.getSize());
 
+        System.out.println("");
+        newList.addBefore(9, 3);
+
+        newList.printList();
+        System.out.println("Current Size of list is: " + newList.getSize());
 
     }
 }
