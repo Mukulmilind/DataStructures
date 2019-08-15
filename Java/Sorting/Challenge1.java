@@ -1,4 +1,4 @@
-package Sorting;
+package sorting;
 /*
     Merge Sort Algorithm is descending order
 */

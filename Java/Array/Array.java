@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 // Java program to illustrate creating an array of integers,  puts some values in the array, 
 // and prints each value to standard output. 

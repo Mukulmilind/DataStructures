@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 // Java program to illustrate creating an array of objects 
 

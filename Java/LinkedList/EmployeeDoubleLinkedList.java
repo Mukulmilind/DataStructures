@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedlist;
 
 /**
  * @author Mukul Milind Mishra [mukulmilind23@gmail.com]
@@ -6,8 +6,8 @@ package LinkedList;
  * 
  */
 
-import LinkedList.lists.Employee;
-import LinkedList.lists.EmployeeNodeDoubly;
+import linkedlist.lists.Employee;
+import linkedlist.lists.EmployeeNodeDoubly;
 
 class DoublyLinkedList {
     private EmployeeNodeDoubly head;

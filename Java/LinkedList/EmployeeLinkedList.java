@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedlist;
 
 /**
  * @author Mukul Milind Mishra [mukulmilind23@gmail.com]
@@ -6,8 +6,8 @@ package LinkedList;
  * 
  */
 
-import LinkedList.lists.Employee;
-import LinkedList.lists.EmployeeNode;
+import linkedlist.lists.Employee;
+import linkedlist.lists.EmployeeNode;
 
 class SinglyLinkedList {
     private EmployeeNode head;

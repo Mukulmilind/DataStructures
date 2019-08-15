@@ -1,3 +1,5 @@
+package linkedlist;
+
 class Node {
     private int data;
     private Node next;
@@ -67,19 +69,24 @@ class LinkedList {
         size++;
     }
     // Challenge 1: Method for adding 'data' before 'key' element in the list
-    public void addBefore(int data, int key) {
+    public boolean addBefore(int data, int key) {
+        if(isEmpty()) return false;
+
         Node node = new Node(data);
         Node current = head;
-        while (current.getData() != key) {
+
+        //find the existing key value
+        while (current != null && current.getData() != key) {
             current = current.getNext();
         }
         // key not found
-        if (current == null) return;
+        if (current == null) return false;
 
         node.setNext(current);
         node.setPrevious(current.getPrevious());
         current = current.getPrevious();
         current.setNext(node);
+        return true;
     }
 
     public Node removeFront() {

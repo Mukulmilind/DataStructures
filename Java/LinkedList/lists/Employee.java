@@ -1,4 +1,4 @@
-package LinkedList.lists;
+package linkedlist.lists;
 
 public class Employee {
     private String firstName;

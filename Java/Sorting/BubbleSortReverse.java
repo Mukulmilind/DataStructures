@@ -1,4 +1,4 @@
-package Sorting;
+package sorting;
 /*
     Author: Mukul Milind Mishra [mukulmilind23@gamil.com]
     This is another version of Bubble sort where the sorting is done from last towards the begining of the

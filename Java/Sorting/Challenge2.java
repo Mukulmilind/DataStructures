@@ -1,4 +1,4 @@
-package Sorting;
+package sorting;
 /*
     Author: Mukul Milind Mishra [mukulmilind23@gamil.com]
     The Insertion Sort algorithm using recursion.

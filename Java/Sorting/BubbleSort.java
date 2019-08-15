@@ -1,4 +1,4 @@
-package Sorting;
+package sorting;
 import java.util.Scanner;
 
 // Write a java program to sort a given array using bubble sort in ascending order

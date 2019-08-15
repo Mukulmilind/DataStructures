@@ -1,3 +1,10 @@
+package linkedlist;
+
+/**
+ * @author Mukul Milind Mishra [mukulmilind23@gmail.com]
+ * Implementation of Linked list using standard JDK functions and then iterating over the elements 
+ * using the Iterator, can be done using for-each loop as well.
+ */
 import java.util.Iterator;
 import java.util.LinkedList;
 
