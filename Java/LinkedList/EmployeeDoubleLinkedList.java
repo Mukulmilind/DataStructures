@@ -1,11 +1,13 @@
+package LinkedList;
+
 /**
  * @author Mukul Milind Mishra [mukulmilind23@gmail.com]
- * Java Program to implement double linked list
+ * Java Program to implement doubly linked list
  * 
  */
 
-import lists.Employee;
-import lists.EmployeeNodeDoubly;
+import LinkedList.lists.Employee;
+import LinkedList.lists.EmployeeNodeDoubly;
 
 class DoublyLinkedList {
     private EmployeeNodeDoubly head;

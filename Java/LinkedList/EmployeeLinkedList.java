@@ -1,5 +1,13 @@
-import lists.Employee;
-import lists.EmployeeNode;
+package LinkedList;
+
+/**
+ * @author Mukul Milind Mishra [mukulmilind23@gmail.com]
+ * Java Program to implement singly linked list
+ * 
+ */
+
+import LinkedList.lists.Employee;
+import LinkedList.lists.EmployeeNode;
 
 class SinglyLinkedList {
     private EmployeeNode head;

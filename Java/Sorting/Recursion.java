@@ -1,3 +1,5 @@
+package Sorting;
+
 // Author : Mukul Milind Mishra [mukulmilind23@gmail.com]
 // Java program to find factorial of a number to explain how recursion works
 

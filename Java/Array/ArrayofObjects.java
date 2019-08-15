@@ -1,3 +1,5 @@
+package Array;
+
 // Java program to illustrate creating an array of objects 
 
 class Employee {

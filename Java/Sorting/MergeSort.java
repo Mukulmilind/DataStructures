@@ -1,3 +1,4 @@
+package Sorting;
 /** 
     Author: Mukul Milind Mishra [mukulmilind23@gmail.com]
     - Merge Sort uses divide and conquer approach to sort an array. 
