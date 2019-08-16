@@ -3,9 +3,10 @@ import java.util.NoSuchElementException;
 /**
  * @author Mukul Milind Mishra [mukulmilind23@gmail.com] 
  * Queue is FIFO - First in First out. It is similar to a usual {@link ArrayQueue} 
- * Java program to implement circular queue using array in order to avoid the problem of increasing size in case of
- * multiple add and remove from the queue.
+ * Java program to implement circular queue using array in order to avoid the problem of increasing size 
+ * in case of multiple add and remove from the queue.
  */
+
 class ArrayCircularQueue {
     private int [] queue;
     private int front;

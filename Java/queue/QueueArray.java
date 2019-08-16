@@ -1,9 +1,9 @@
 import java.util.NoSuchElementException;
 
 /**
- * @author Mukul Milind Mishra [mukulmilind23@gmail.com] Queue is FIFO - First
- *         in First out. It is similar to a usual {@link ArrayQueue} Java
- *         program to implement queue using array.
+ * @author Mukul Milind Mishra [mukulmilind23@gmail.com] 
+ * Queue is FIFO - First in First out. It is similar to a usual {@link ArrayQueue} Java
+ * program to implement queue using array.
  */
 class ArrayQueue {
     private int [] queue;
