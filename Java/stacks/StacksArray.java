@@ -56,7 +56,7 @@ class ArrayStack {
         return top == 0;
     }
 }
-class StacksArray {
+public class StacksArray {
      public static void main(String [] args) {
         ArrayStack stack = new ArrayStack(5);
         stack.push(1);
