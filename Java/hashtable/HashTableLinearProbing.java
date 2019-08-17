@@ -116,6 +116,17 @@ class SimpleHashTable {
         return hashTable[hashedKey].employee;
     }
 
+    public Employee remove(String key) {
+        int hashedKey = findKey(key);
+        if (hashedKey == -1) {
+            return null;
+        }
+
+        Employee employee = hashTable[hashedKey].employee;
+        hashTable[hashedKey] = null;
+        return employee;
+    }
+
     private int findKey(String key) {
         int hashedKey = hashKey(key);
         if (hashTable[hashedKey] != null && hashTable[hashedKey].key.equals(key)) {
@@ -132,10 +143,10 @@ class SimpleHashTable {
             hashedKey = (hashedKey + 1) % hashTable.length;
         }
 
-        if (stopIndex  == hashedKey) {
-            return  -1;
-        } else {
+        if (hashTable[hashedKey] != null && hashTable[hashedKey].key.equals(key)) {
             return hashedKey;
+        } else {
+            return -1;
         }
     }
 
@@ -178,5 +189,15 @@ public class HashTableLinearProbing {
 
         System.out.println("Retrieve employee with key mukul " + ht.get("mukul"));
         System.out.println("Retrieve employee with key mukul " + ht.get("poonam"));
+
+        ht.remove("poonam");
+        ht.remove("uday");
+
+        ht.printHashTable();
+
+        ht.put("uday", uday);
+        ht.put("poonam", poonam);
+
+        ht.printHashTable();
     }
 }
