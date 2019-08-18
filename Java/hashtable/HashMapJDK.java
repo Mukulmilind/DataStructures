@@ -103,12 +103,12 @@ public class HashMapJDK {
         Employee employee = newHash.putIfAbsent("mukul", milind);
         System.out.println(employee);
         
-        // Iterator<Employee> iter = newHash.values().iterator();
-        // while(iter.hasNext()) {
-        //     System.out.println(iter.next());
-        // }
+        Iterator<Employee> iter = newHash.values().iterator();
+        while(iter.hasNext()) {
+            System.out.println(iter.next());
+        }
         
-        newHash.forEach((k, v) -> System.out.println("Key: " + k + "Value: " + v)); 
+        // newHash.forEach((k, v) -> System.out.println("Key: " + k + "Value: " + v)); 
 
     }
 }

@@ -47,9 +47,36 @@ class TreeNode {
             leftChild.traverseInOrder();
         }
         System.out.println("Data: " + data);
+
         if (rightChild != null) {
             rightChild.traverseInOrder();
         }
+    }
+
+    // Pre-order traversal
+    public void traversePreOrder() {
+        System.out.println("Data: " + data);
+
+        if (leftChild != null) {
+            leftChild.traverseInOrder();
+        }
+        
+        if (rightChild != null) {
+            rightChild.traverseInOrder();
+        }
+    }
+
+    // Post-order traversal
+    public void traversePostOrder() {
+        if (leftChild != null) {
+            leftChild.traverseInOrder();
+        }
+        
+        if (rightChild != null) {
+            rightChild.traverseInOrder();
+        }
+
+        System.out.println("Data: " + data);
     }
 
     // Search for a value
@@ -134,6 +161,20 @@ class Tree {
         }
     }
 
+    // Pre-order traversal
+    public void traversePreOrder() {
+        if (root != null) {
+            root.traversePreOrder(); 
+        }
+    }
+
+    // Post-order traversal
+    public void traversePostOrder() {
+        if (root != null) {
+            root.traversePostOrder(); 
+        }
+    }
+
     // Search for an element in BST
     public TreeNode get(int value) {
         if (root != null) {
@@ -149,8 +190,29 @@ class Tree {
 
     private TreeNode delete(TreeNode subTreeRoot, int value) {
          if (subTreeRoot == null) {
-            return subTreeRoot;
+            return subTreeRoot; // bascially returning null as tree is empty.
          }
+         if (value < subTreeRoot.getData()) {
+             subTreeRoot.setLeftChild(delete(subTreeRoot.getLeftChild(), value));
+         } else if (value > subTreeRoot.getData()) {
+             subTreeRoot.setRightChild(delete(subTreeRoot.getRightChild(), value));
+         } else {
+            // Case 0 and 1 - Node to delete has 0 or 1 child node.
+             if (subTreeRoot.getLeftChild() == null) {
+                 return subTreeRoot.getRightChild(); //if this is a leaf then return null else return replacement
+             } else if (subTreeRoot.getRightChild() == null) {
+                 return subTreeRoot.getLeftChild(); // same as above for right Child
+             }
+
+             // Case 3 - The node to delete has two children
+             // Replace the value of subTreeRoot node with the smallest value in right sub-tree
+             subTreeRoot.setData(subTreeRoot.getRightChild().min());
+
+             // Delete the node that has the smallest value in the right sub-tree
+             subTreeRoot.setRightChild(delete(subTreeRoot.getRightChild(), subTreeRoot.getData()));
+         }
+
+         return subTreeRoot;
     }
 
     // Find the minimum value if the BST
@@ -186,14 +248,18 @@ public class BinarySearchTree {
         intTree.insert(32);
 
         intTree.traverseInOrder();
-        System.out.println();
+        System.out.println("");
 
-        System.out.println(intTree.get(27).getData());
-        System.out.println(intTree.get(15).getData());
-        System.out.println(intTree.get(88));
-        System.out.println();
+        // System.out.println(intTree.get(27).getData());
+        // System.out.println(intTree.get(15).getData());
+        // System.out.println(intTree.get(88));
+        // System.out.println();
 
-        System.out.println("The minimum element in the BST is : " + intTree.min());
-        System.out.println("The maximum element in the BST is : " + intTree.max());
+        // System.out.println("The minimum element in the BST is : " + intTree.min());
+        // System.out.println("The maximum element in the BST is : " + intTree.max());
+
+        intTree.delete(15);
+        intTree.traverseInOrder();
+        System.out.println("");
     }
 }
