@@ -168,7 +168,7 @@ class Tree {
         }
     }
 
-    // Post-order traversal
+    // Post -order traversal
     public void traversePostOrder() {
         if (root != null) {
             root.traversePostOrder(); 
