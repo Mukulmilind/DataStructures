@@ -13,6 +13,9 @@
  * - Inserting in a heap, add element to the end and then fix its position [heapify]
  *  - Compare the value against its parent and if its less than its parent - swap them.
  *  - Repeat this process till we get right place.
+ * 
+ * - Runtime for inserting is O(n.logn) and for deleting its O(n) but heapifying is O(logn) hence O(n.logn) again.
+ * - Finding the root is constant time O(1).
  */
 
 // Max heap Implementation
@@ -123,11 +126,21 @@ class Heap {
         }
     }
 
+    // Print the heap in order: parent -> child [next level] from left to right
     public void printHeap() {
         for (int i = 0; i < size; i++) {
             System.out.print(heap[i] + " ");
         }
         System.out.println(" ");
+    }
+
+    // Peek method always returns the root of the heap if its not empty
+    public int peek() {
+        if (isEmpty()) {
+            throw new IndexOutOfBoundsException("Heap is Empty!");
+        } else {
+            return heap[0];
+        }
     }
 }
 
@@ -146,8 +159,14 @@ class Heap {
 
         heap.printHeap();
 
-        heap.delete(1);
+        heap.delete(5);
 
         heap.printHeap();
+        System.out.println("Peeking on the top of the peak: " + heap.peek()); 
+
+        heap.delete(0);
+
+        heap.printHeap();
+        System.out.println("Peeking on the top of the peak: " + heap.peek());         
      }
  }
