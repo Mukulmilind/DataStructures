@@ -25,7 +25,7 @@ public class ArrayChallenge {
     public static void reverseArray(int[] input) {
         int start = 0;
         int end = input.length - 1;
-
+        
         while(start < end) {
             swap(input, start, end);
             
