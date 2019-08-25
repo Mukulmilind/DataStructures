@@ -83,8 +83,27 @@ class LinkedList {
                 return current;
             }
         }
-
         return current;
+    }
+
+    // O(n): Reverse the linked list in place
+    public void reverseLinkedList() {
+        Node current = head;
+        Node previous = null;
+        Node next = null;
+
+        // Next node would point to current's next node, current node would point to previous
+        // node, and current node would point to next node. This process is repeated untill 
+        // current reaches end of the linked list
+        while (current != null) {
+            next = current.getNextNode();
+            current.setNextNode(previous);
+            previous = current;
+            current = next;
+        }
+        // Finally head would point to previous which is pointing to the last element if the 
+        // linked list, which is the first element of the new reversed linked list.
+        head = previous;
     }
 }
 public class LinkedListChallenge {
@@ -100,5 +119,8 @@ public class LinkedListChallenge {
 
         list.printList();
         System.out.println("The middle of the linked list is: " + list.findMiddleNode().getData());
+
+        list.reverseLinkedList();
+        list.printList();
     }
 }
