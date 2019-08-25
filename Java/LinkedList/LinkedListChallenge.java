@@ -101,8 +101,8 @@ class LinkedList {
             previous = current;
             current = next;
         }
-        // Finally head would point to previous which is pointing to the last element if the 
-        // linked list, which is the first element of the new reversed linked list.
+        // Finally head would point to previous which is pointing to the last element of the 
+        // linked list, which is the first element of the reversed linked list.
         head = previous;
     }
 }
