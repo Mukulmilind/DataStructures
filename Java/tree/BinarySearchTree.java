@@ -58,22 +58,22 @@ class TreeNode {
         System.out.println("Data: " + data);
 
         if (leftChild != null) {
-            leftChild.traverseInOrder();
+            leftChild.traversePreOrder();
         }
         
         if (rightChild != null) {
-            rightChild.traverseInOrder();
+            rightChild.traversePreOrder();
         }
     }
 
     // Post-order traversal
     public void traversePostOrder() {
         if (leftChild != null) {
-            leftChild.traverseInOrder();
+            leftChild.traversePostOrder();
         }
         
         if (rightChild != null) {
-            rightChild.traverseInOrder();
+            rightChild.traversePostOrder();
         }
 
         System.out.println("Data: " + data);
